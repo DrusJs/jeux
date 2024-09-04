@@ -44,6 +44,7 @@
     --color-white: #FFFFFF;
     --color-secondary: #9AA1A8;
     --color-red: #d5232a;
+    --color-green: #198754;
     --color-grey: #EEF2F5;
     --color-dark-grey: #394B59;
 }
@@ -125,7 +126,7 @@ h3 {
     width: 100%;
 }
 .avatar-card.active {
-    border: 2px solid #198754;
+    border: 2px solid var(--color-green);
 }
 
 .btn img {
@@ -142,6 +143,7 @@ h3 {
     top: 4px;
     left: 16px;
     overflow: hidden;
+    background-color: var(--color-white);
 }
 
 .hero-wrapper {
@@ -173,7 +175,7 @@ input.d-none + label {
 }
 
 input.d-none:checked + label {
-    background-color: #198754;
+    background-color: var(--color-green);
 }
 
 .btn {
@@ -243,7 +245,7 @@ input.d-none:checked + label {
         border: 2px solid #6c757d44;
     }
     .avatar-card.active:hover {
-        border: 2px solid #198754;
+        border: 2px solid var(--color-green);
     }
     .btn-red:hover {
         background-color: #bb2429;
