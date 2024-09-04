@@ -137,6 +137,18 @@ h3 {
     border: 2px solid var(--color-green);
 }
 
+.hero-overflow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 200px;
+}
+.hero-overflow img {
+    object-fit: cover;
+    width: 400px;
+}
+
 .btn img {
     width: 40px;
     height: 40px;
