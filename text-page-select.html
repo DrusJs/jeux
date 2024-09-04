@@ -23,7 +23,9 @@
                 <p class="text-center mt-auto d-block">Ouvrez-vous le compte bancaire ?</p>
                 <div class="text-wrapper d-flex flex-column m-auto">
                     <div class="d-flex align-items-center gap-5">
-                        <img src="img/question-mark.svg" alt="" width="100">
+                        <button type="button" class="btn position-relative" data-bs-toggle="modal" data-bs-target="#help-modal">
+                            <img src="img/question-mark.svg" alt="" width="100">
+                        </button>
                         <div class="d-flex flex-column gap-2">
                             <input type="radio" name="select" id="success" class="d-none">
                             <label for="success">Oui</label>
@@ -41,6 +43,30 @@
             </div>
         </div>
     </main>
+
+    <div class="modal modal-avatar" tabindex="-1" id="help-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Mes Avatars</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="hero-wrapper">
+                    <img class="hero-img" src="img/Crapaud doré, grosse pastille.png" alt="">
+                </div>
+                <div class="text-wrapper d-flex flex-column mt-auto mx-auto">
+                    <p><i>« Je m’appelle « Crapaud Doré Corruption, n’est-ce pas un joli nom ?….. »</i></p>
+                    <p>Je m’appelle l’Ogre Compliance. Un conseil qui faut son pesant d’or :  il ne faut pas se méfier de tout le monde, ni vouloir savoir tout sur tout le monde. Mais il faut vérifier certaines informations </p>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-lg mx-auto" data-bs-dismiss="modal">Valider</button>
+            </div>
+            </div>
+        </div>
+    </div>
     
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
