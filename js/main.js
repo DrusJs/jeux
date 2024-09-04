@@ -21,4 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    if (document.querySelector('.btn-toggles')) {
+        let btns = Array.from(document.querySelector('.btn-toggles').children)
+
+        btns.forEach(el=>{
+            el.addEventListener('click', (e)=>{
+                if (!e.currentTarget.classList.contains('selected')) {
+                    const active = document.querySelector('.selected') 
+                    
+                    active && active.classList.remove('selected')
+                    e.currentTarget.classList.add('selected')
+                } else {
+                    e.currentTarget.classList.remove('selected')
+                }
+            })
+        })
+    }
+
 });
