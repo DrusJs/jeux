@@ -232,7 +232,15 @@ input.d-none:checked + label {
     box-shadow: none !important;
 }
 
-
+.help-btn {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+}
+.help-btn img {
+    width: 100px;
+    height: 100px;
+}
 
 
 @media (max-width: 700px) {
