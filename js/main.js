@@ -39,3 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+function diffFilterAction(enableClass, removeClasses) {
+    const container = document.querySelector('.btn-toggles')
+
+    removeClasses.forEach((classname) => {
+        container.classList.remove(classname)
+    })
+
+    container.classList.toggle(enableClass)
+}
