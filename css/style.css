@@ -185,10 +185,6 @@ h3 {
     height: 200px;
 }
 
-.adventure-card {
-    cursor: pointer;
-}
-
 .adventure-card.selected .adventure-image {
     border: 2px solid var(--color-green);
     box-shadow: 0px 10px 10px rgba(0, 150, 0, .4    );
@@ -200,6 +196,7 @@ h3 {
     height: 150px;
     min-width: 150px;
     border-radius: 200px;
+    cursor: pointer;
     overflow: hidden;
     display: flex;
     align-items: center;
