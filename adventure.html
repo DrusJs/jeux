@@ -33,7 +33,7 @@
     <main class="main">
         <div class="container">
             <div class="main-action d-flex flex-column align-items-center">
-                <div class="d-flex gap-2 flex-wrap mt-4 mb-5">
+                <div class="keyword-tags d-flex gap-2 flex-wrap mt-4 mb-5">
                     <button class="btn btn-secondary btn-lg">keyword1</button>
                     <button class="btn btn-secondary btn-lg">keyword2</button>
                     <button class="btn btn-secondary btn-lg">keyword3</button>    
@@ -61,13 +61,13 @@
                     <button class="btn btn-secondary btn-lg">keyword25</button>           
                 </div>
                 <h1 class="title text-center mb-5">Mes Aventures</h1>
-                <div class="d-flex gap-2 flex-wrap mt-4">
-                    <button class="btn btn-success btn-lg" onclick="diffFilterAction('easy', ['medium', 'hard'])">facile</button>
-                    <button class="btn btn-warning btn-lg" onclick="diffFilterAction('medium', ['easy', 'hard'])">moyen</button>
-                    <button class="btn btn-danger btn-lg" onclick="diffFilterAction('hard', ['medium', 'easy'])">difficile</button>        
+                <div class="diff-buttons d-flex gap-2 flex-wrap mt-4">
+                    <button class="btn btn-success btn-lg" onclick="diffFilterAction('easy', ['medium', 'hard'], this)">facile</button>
+                    <button class="btn btn-warning btn-lg" onclick="diffFilterAction('medium', ['easy', 'hard'], this)">moyen</button>
+                    <button class="btn btn-danger btn-lg" onclick="diffFilterAction('hard', ['medium', 'easy'], this)">difficile</button>        
                 </div>
-                <div class="btn-toggles d-flex flex-column w-100 toggle-grid justify-content-center align-items-center gap-4 mt-5">
-                    <div class="adventure-card d-flex align-items-center gap-4">
+                <div class="btn-toggles d-flex flex-column w-100 toggle-grid justify-content-center gap-4 mt-5">
+                    <div class="adventure-card filter-enable d-flex align-items-center gap-4" data-keywords="['keyword1', 'keyword10']">
                         <div class="adventure-image">
                             <img src="img/Fifi.png" alt="adventure">
                         </div>
@@ -76,7 +76,7 @@
                             <p class="text-black">Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</p>
                         </div>
                     </div>
-                    <div class="adventure-card d-flex align-items-center gap-4">
+                    <div class="adventure-card filter-enable d-flex align-items-center gap-4" data-keywords="['keyword2', 'keyword3', 'keyword1', 'keyword5', 'keyword6']">
                         <div class="adventure-image">
                             <img src="img/Fifi.png" alt="adventure">
                         </div>
@@ -85,7 +85,7 @@
                             <p class="text-black">Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</p>
                         </div>
                     </div>
-                    <div class="adventure-card d-flex align-items-center gap-4">
+                    <div class="adventure-card filter-enable d-flex align-items-center gap-4" data-keywords="['keyword2', 'keyword3', 'keyword4', 'keyword5', 'keyword6']">
                         <div class="adventure-image">
                             <img src="img/Fifi.png" alt="adventure">
                         </div>
@@ -94,7 +94,7 @@
                             <p class="text-black">Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</p>
                         </div>
                     </div>
-                    <div class="adventure-card d-flex align-items-center gap-4">
+                    <div class="adventure-card filter-enable d-flex align-items-center gap-4" data-keywords="['keyword2', 'keyword6']">
                         <div class="adventure-image">
                             <img src="img/Fifi.png" alt="adventure">
                         </div>
@@ -103,7 +103,7 @@
                             <p class="text-black">Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</p>
                         </div>
                     </div>
-                    <div class="adventure-card d-flex align-items-center gap-4">
+                    <div class="adventure-card filter-enable d-flex align-items-center gap-4" data-keywords="['keyword2', 'keyword20']">
                         <div class="adventure-image">
                             <img src="img/Fifi.png" alt="adventure">
                         </div>
@@ -112,7 +112,7 @@
                             <p class="text-black">Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</p>
                         </div>
                     </div>
-                    <div class="adventure-card d-flex align-items-center gap-4">
+                    <div class="adventure-card filter-enable d-flex align-items-center gap-4" data-keywords="['keyword2', 'keyword6']">
                         <div class="adventure-image">
                             <img src="img/Fifi.png" alt="adventure">
                         </div>
@@ -121,6 +121,9 @@
                             <p class="text-black">Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</p>
                         </div>
                     </div>
+                </div>
+                <div class="btn-next w-100 mt-3 d-flex gap-3">
+                    <a class="btn btn-success btn-lg w-100" href="text-page2.html">Suivant</a>
                 </div>
             </div>
         </div>

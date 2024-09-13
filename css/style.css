@@ -208,14 +208,28 @@ h3 {
 
 .btn-toggles.easy .adventure-card,
 .btn-toggles.medium .adventure-card,
-.btn-toggles.hard .adventure-card {
+.btn-toggles.hard .adventure-card,
+.btn-toggles.keyword .adventure-card {
     display: none !important;
 }
 
-.btn-toggles.easy .adventure-card:has(.bg-green),
-.btn-toggles.medium .adventure-card:has(.bg-yellow),
-.btn-toggles.hard .adventure-card:has(.bg-red) {
+.btn-toggles.easy .adventure-card:has(.bg-green).filter-enable,
+.btn-toggles.medium .adventure-card:has(.bg-yellow).filter-enable,
+.btn-toggles.hard .adventure-card:has(.bg-red).filter-enable,
+.btn-toggles.easy.keyword .adventure-card:has(.bg-green).filter-enable,
+.btn-toggles.medium.keyword .adventure-card:has(.bg-yellow).filter-enable,
+.btn-toggles.hard.keyword .adventure-card:has(.bg-red).filter-enable {
     display: flex !important;
+}
+
+.diff-buttons .btn.btn-success.active {
+    box-shadow: 0 8px 14px -4px #198754;
+}
+.diff-buttons .btn.btn-warning.active {
+    box-shadow: 0 8px 14px -4px #ffc107;
+}
+.diff-buttons .btn.btn-danger.active {
+    box-shadow: 0 8px 14px -4px #d5232a;
 }
 
 .adventure-image img {
@@ -283,13 +297,22 @@ h3 {
     overflow: hidden;
     border-radius: 1rem;
     align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
 }
 .hero-img {
     max-height: 200px;
     object-fit: contain;
 }
+.hero-img.large {
+    max-height: 350px;
+    object-fit: contain;
+}
 .text-wrapper {
-    max-width: 600px;
+    max-width: 700px;
     width: 100%;
     padding: 10px 30px;
 }
@@ -301,15 +324,14 @@ input.d-none + label {
     padding: 3px 20px;
     width: 100%;
     max-width: 600px;
-    background-color: var(--color-red);
     text-align: center;
     cursor: pointer;
     border-radius: 0.5rem;
-    color: var(--color-white);
 }
 
 input.d-none:checked + label {
-    background-color: var(--color-green);
+    background-color: #808080;
+    color: var(--color-white);
 }
 
 .btn-red {
@@ -358,13 +380,31 @@ input.d-none:checked + label {
 }
 
 .help-btn {
-    width: 100px;
+    width: 200px;
     min-width: 100px;
-    height: 100px;
+    height: 300px;
+    border-radius: 200px 200px 0 0;
+    position: relative;
 }
+
+.help-btn::after {
+    content: 'HELP!';
+    color: var(--color-red);
+    padding: 6px 20px;
+    background-color: var(--color-white);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+}
+
 .help-btn img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
 }
 
 .title-img {
@@ -402,7 +442,7 @@ input.d-none:checked + label {
         max-height: 100px;
     }
     .text-wrapper {
-        max-width: 600px;
+        max-width: 700px;
         width: 100%;
         padding: 10px 0px;
     }
