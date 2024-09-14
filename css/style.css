@@ -185,6 +185,11 @@ h3 {
     height: 200px;
 }
 
+.adventure-card {
+    color: var(--color-black);
+    cursor: pointer;
+}
+
 .adventure-card.selected .adventure-image {
     border: 2px solid var(--color-green);
     box-shadow: 0px 10px 10px rgba(0, 150, 0, .4    );
@@ -196,7 +201,6 @@ h3 {
     height: 150px;
     min-width: 150px;
     border-radius: 200px;
-    cursor: pointer;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -377,7 +381,8 @@ input.d-none:checked + label {
 }
 
 .help-btn {
-    width: 200px;
+    width: 220px;
+    min-width: 220px;
     min-width: 100px;
     height: 300px;
     border-radius: 200px 200px 0 0;
@@ -399,9 +404,8 @@ input.d-none:checked + label {
 }
 
 .help-btn img {
-    width: 200px;
+    width: 220px;
     height: 300px;
-    object-fit: contain;
 }
 
 .title-img {
