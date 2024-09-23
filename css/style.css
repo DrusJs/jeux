@@ -153,15 +153,16 @@ h3 {
 }
 
 .bg-green {
-    background-color: var(--color-green);
-    color: var(--color-white);
-}
-.bg-red {
-    background-color: var(--color-red);
+    background-color: #C8665E;
     color: var(--color-white);
 }
 .bg-yellow {
-    background-color: var(--color-yellow);
+    background-color: #B32221;
+    color: var(--color-white);
+}
+.bg-red {
+    background-color: #581F16;
+    color: var(--color-white);
 }
 
 .main-item-image img.larger {
@@ -240,13 +241,30 @@ h3 {
 }
 
 .diff-buttons .btn.btn-success.active {
-    box-shadow: 0 8px 14px -4px #198754;
+    box-shadow: 0 8px 14px -4px #C8665E;
 }
 .diff-buttons .btn.btn-warning.active {
-    box-shadow: 0 8px 14px -4px #ffc107;
+    box-shadow: 0 8px 14px -4px #B32221;
 }
 .diff-buttons .btn.btn-danger.active {
-    box-shadow: 0 8px 14px -4px #d5232a;
+    box-shadow: 0 8px 14px -4px #581F16;
+}
+
+
+.diff-buttons .btn.btn-success {
+    background-color:  #C8665E;
+    color: var(--color-white);
+    font-weight: 700;
+}
+.diff-buttons .btn.btn-warning {
+    background-color: #B32221;
+    color: var(--color-white);
+    font-weight: 700;
+}
+.diff-buttons .btn.btn-danger {
+    background-color: #581F16;
+    color: var(--color-white);
+    font-weight: 700;
 }
 
 .adventure-image img {
@@ -284,9 +302,6 @@ h3 {
 .avatar-card img.large {
     object-fit: cover;
     width: 250px;
-}
-.avatar-card.active {
-    border: 2px solid var(--color-green);
 }
 
 .hero-overflow {
