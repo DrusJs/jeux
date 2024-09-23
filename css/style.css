@@ -202,11 +202,25 @@ h3 {
 }
 
 .points {
+    text-align: center;
+    line-height: 66px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.points-icon {
+    display: block;
     width: 70px;
     height: 70px;
     border-radius: 70px;
-    text-align: center;
-    line-height: 66px;
+    overflow: hidden;
+}
+
+.points-icon img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
 }
 
 .btn-toggles.easy .adventure-card,
