@@ -350,22 +350,22 @@ h3 {
 
 .hero-wrapper.hero-row {
     width: 100%;
-    max-width: 800px;
-    height: 300px;
+    max-width: 500px;
+    height: 200px;
 }
 
 .hero-wrapper.hero-row .hero-img {
-    width: 200px;
-    height: 200px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
     overflow: hidden;
 }
 .hero-wrapper.hero-row .hero-img.centere {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     overflow: hidden;
-    max-height: 300px;
+    max-height: 200px;
 }
 
 .hero-img {
