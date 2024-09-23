@@ -489,6 +489,10 @@ input.d-none:checked + label {
     height: 300px;
 }
 
+.title {
+    font-size: 700px;
+}
+
 .title-img {
     width: 40px;
     height: 40px;
