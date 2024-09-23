@@ -294,6 +294,7 @@ h3 {
     width: 260px;
 }
 
+
 .card .btn {
     font-weight: 700;
 }
@@ -370,7 +371,7 @@ h3 {
 .text-wrapper img {
     height: 300px;
     width: auto;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .btn-next {
