@@ -490,7 +490,7 @@ input.d-none:checked + label {
 }
 
 .title {
-    font-size: 700px;
+    font-weight: 700;
 }
 
 .title-img {
