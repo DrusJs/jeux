@@ -255,16 +255,19 @@ h3 {
     background-color:  #C8665E;
     color: var(--color-white);
     font-weight: 700;
+    border: none;
 }
 .diff-buttons .btn.btn-warning {
     background-color: #B32221;
     color: var(--color-white);
     font-weight: 700;
+    border: none;
 }
 .diff-buttons .btn.btn-danger {
     background-color: #581F16;
     color: var(--color-white);
     font-weight: 700;
+    border: none;
 }
 
 .adventure-image img {
