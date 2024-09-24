@@ -211,16 +211,19 @@ h3 {
 }
 
 .points-icon {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 70px;
     height: 70px;
     border-radius: 70px;
     overflow: hidden;
+    border: none !important;
 }
 
 .points-icon img {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
 }
 
@@ -276,6 +279,7 @@ h3 {
     height: 300px;    
 }
 
+
 .card .card-image {
     width: 170px;
     height: 170px;
@@ -288,7 +292,7 @@ h3 {
 }
 
 .card .card-image.square {
-    border-radius: 10px;
+    border-radius: 4px 4px 0 0;
 }
 .card .card-image img {
     width: 260px;
@@ -355,17 +359,19 @@ h3 {
 }
 
 .hero-wrapper.hero-row .hero-img {
-    width: 140px;
+    max-width: 140px;
+    width: 100%;
     height: 140px;
-    object-fit: cover;
-    overflow: hidden;
 }
 .hero-wrapper.hero-row .hero-img.centere {
-    width: 200px;
+    max-width: 200px;
+    width: 150%;
     height: 200px;
-    object-fit: cover;
-    overflow: hidden;
     max-height: 200px;
+}
+img.que {
+    width: 100%;
+    max-width: 500px;
 }
 
 .hero-img {
@@ -469,21 +475,6 @@ input.d-none:checked + label {
     position: relative;
 }
 
-.help-btn::after {
-    content: 'HELP!';
-    color: var(--color-red);
-    padding: 6px 20px;
-    background-color: var(--color-white);
-    font-size: 22px;
-    font-weight: 700;
-    border-radius: 5px;
-    letter-spacing: 2px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 30px;
-}
-
 .help-btn img {
     width: 300px;
     height: 300px;
@@ -503,10 +494,16 @@ input.d-none:checked + label {
     border-radius: 8px;
 }
 
+.search-wrapper {
+    width: 100%;
+    max-width: 500px;
+}
+
 .search-wrapper input {
     padding: 6px 20px;
     outline: none;
     border-radius: 6px;
+    width: 100%;
     height: 48px;
 }
 
@@ -577,6 +574,19 @@ input.d-none:checked + label {
     h1 {
         font-size: 2.5rem;
     }
+    .help-btn {
+        width: 240px;
+        min-width: 240px;
+        height: 240px;
+    } 
+    .help-btn img {
+        width: 100%;
+        height: auto;
+    }
+    input.d-none + label {
+        font-size: 20px;
+        padding: 5px 25px;
+    }
 }
 
 @media (hover: hover) {    
@@ -602,9 +612,6 @@ input.d-none:checked + label {
         background-color: #0d6efd !important;
     }
 
-    .card .card-image:hover {
-        transform: scale(0.9);
-    }
     .btn-secondary:hover,
     .btn-secondary:active {
         background-color: #808080;
