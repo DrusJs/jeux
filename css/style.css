@@ -137,6 +137,10 @@ h3 {
     max-width: 900px;
 }
 
+.modal .side-img {
+    object-fit: contain;
+}
+
 .main-item-image {
     width: 350px;
     min-width: 350px;
