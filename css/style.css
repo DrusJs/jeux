@@ -373,11 +373,13 @@ h3 {
     height: 200px;
 }
 
+
 .hero-wrapper.hero-row {
     width: 100%;
     max-width: 500px;
     height: 200px;
     gap: 20px;
+    overflow: visible;
 }
 
 .hero-wrapper.hero-row .hero-img {
