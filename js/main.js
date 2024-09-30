@@ -38,6 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    if (document.querySelector('.select-wrapper')) {
+        let labels = document.querySelectorAll('.select-wrapper label')
+
+        labels.forEach(el=>{
+            if (el.innerHTML.length > 7) {
+                document.querySelector('.select-wrapper').classList.add('flex-wrap')
+                document.querySelector('.select-wrapper').classList.remove('gap-5')
+                document.querySelector('.select-wrapper').classList.add('gap-3')
+            }
+        })
+    }
+
     let keywords = []
     const keywordsFilter = document.querySelectorAll('.keyword-tags .btn')
 
