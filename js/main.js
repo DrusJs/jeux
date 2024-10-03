@@ -91,7 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-
+    if (document.querySelector('.toggle-avatar')) {
+        document.querySelector('.toggle-avatar').addEventListener('click', (e)=>{
+            if (document.querySelector('.avatar-card.active')) {
+                document.querySelector('.btn .preview').innerHTML = document.querySelector('.avatar-card.active').innerHTML
+            }
+        })
+    }
 });
 
 function diffFilterAction(enableClass, removeClasses, el) {
