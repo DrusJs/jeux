@@ -98,7 +98,37 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     }
+
+    if (document.querySelector('.dropdown-menu')) {
+        document.querySelectorAll('.dropdown-menu').forEach(el=>{
+            let items = el.querySelectorAll('.dropdown-item')
+
+            items.forEach(btn=>{
+                btn.addEventListener('click', (e)=>{
+                    let txt = e.currentTarget.innerHTML
+                    e.currentTarget.closest('.dropdown').firstElementChild.innerHTML = txt                    
+                    e.currentTarget.closest('.dropdown').dataset.id = e.currentTarget.parentElement.dataset.id
+                })
+            })
+        })
+    }
+    if (document.querySelector('.input')) {
+        document.querySelectorAll('.input').forEach(el=>{
+            checkInput(el)
+            el.addEventListener('input', (e)=>{
+                checkInput(e.currentTarget)
+            })
+        })
+    }
 });
+
+function checkInput(item) {
+    if (item.value.length > 0) {
+        item.classList.remove('empty')
+    } else {        
+        item.classList.add('empty')
+    }
+}
 
 function diffFilterAction(enableClass, removeClasses, el) {
     const container = document.querySelector('.btn-toggles')
