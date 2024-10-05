@@ -148,3 +148,10 @@ function diffFilterAction(enableClass, removeClasses, el) {
 
     container.classList.toggle(enableClass)
 }
+
+if (document.querySelector('.preloader')) {
+    setTimeout(()=>{
+        document.querySelector('.preloader').classList.add('hide')
+        document.body.classList.remove('no-scroll')
+    }, 3000)
+}
