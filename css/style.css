@@ -444,10 +444,16 @@ img.que {
     max-width: 100%;
 }
 
+.text-wrapper img.h-item {
+    height: auto;
+    max-height: 600px;
+}
+
 .preloader {
     width: 100vw;
     height: 100dvh;
     position: fixed;
+    background-color: var(--color-white);
     top: 0;
     left: 0;
     display: flex;
