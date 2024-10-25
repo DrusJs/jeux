@@ -476,9 +476,13 @@ img.que {
     object-fit: contain;
 }
 
+.preloader .mob {
+    display: none;
+}
+
 .flex-img {
-    width: 40%;
-    height: auto;
+    width: 60% !important;
+    height: auto !important;
     border-radius: 10px;
 }
 
@@ -487,11 +491,11 @@ img.que {
 }
 
 input.d-none + label {
-    padding: 3px 20px;
+    padding: 6px 20px;
     width: 100%;
     max-width: 600px;
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 2rem;
     cursor: pointer;
     border-radius: 0.5rem;
 }
@@ -618,9 +622,41 @@ input.d-none:checked + label {
     font-size: 20px;
 }
 
+@media (max-width: 900px) {
+    .points-icon img,
+    .points-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .grid-triple {
+        grid-template-columns: 1fr 1fr;
+    }
+    .points {
+        gap: 0px;
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: 30px;
+        line-height: 20px;
+        flex-direction: column;
+    }
+    .profile-link img {
+        width: 40px;
+        height: 40px;
+    }
+    .profile-link .login {
+        display: none;
+    }
+}
+
 @media (max-width: 700px) {
     .container {
         padding: 0 16px;
+    }
+    .search-wrapper {
+        order: 1;
+    }
+    .header-mob {
+        flex-wrap: wrap;
     }
     .hero-img {
         max-height: 100px;
@@ -630,8 +666,33 @@ input.d-none:checked + label {
         width: 100%;
         padding: 10px 0px;
     }
+    .preloader  {
+        align-items: flex-start;
+        max-width: 100vw;
+        width: 100%;
+    }
+    .preloader img {
+        object-fit: cover;
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+    .preloader .desc {
+        display: none;
+    }
+    .preloader .mob {
+        display: block;
+    }
     body {
         font-size: 18px;
+    }
+    .adventure-image {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+    }
+    
+    .adventure-image img {
+        height: 70px;
     }
     .modal-dialog {
         max-width: 100vw;
@@ -647,6 +708,25 @@ input.d-none:checked + label {
     }
     .avatar-card img.large {        
         width: 150px;
+    }
+    .grid-triple .btn-secondary {
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+    .hero-wrapper.hero-row .hero-img {
+        max-width: 80px;
+        width: 100%;
+        height: 80px;
+    }
+    .hero-wrapper.hero-row {
+        gap: 12px;
+    }
+
+    .hero-wrapper.hero-row .hero-img.centere {
+        max-width: 150px;
+        width: 150%;
+        height: 150px;
+        max-height: 150px;
     }
 }
 
@@ -676,6 +756,12 @@ input.d-none:checked + label {
     input.d-none + label {
         font-size: 20px;
         padding: 5px 25px;
+    }
+
+    .col-flex-4 {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px !important;
     }
 }
 
