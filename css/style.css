@@ -188,6 +188,7 @@ h3 {
 
 .diff {
     font-size: 16px;
+    white-space: nowrap;
 }
 
 .avatar-card {
@@ -622,6 +623,20 @@ input.d-none:checked + label {
     font-size: 20px;
 }
 
+.stats-table td,
+.stats-table th {
+    padding: 8px 16px;
+    font-size: 22px;
+    border: 1px solid #071E2F;
+    text-align: center;
+}
+
+.stats-table tr td:first-child,
+.stats-table tr th:first-child {
+    text-align: left;
+    min-width: 60%
+}
+
 @media (max-width: 900px) {
     .points-icon img,
     .points-icon {
@@ -692,6 +707,7 @@ input.d-none:checked + label {
     }
     
     .adventure-image img {
+        object-fit: cover;
         height: 70px;
     }
     .modal-dialog {
@@ -771,6 +787,11 @@ input.d-none:checked + label {
         display: grid !important;
         grid-template-columns: 1fr 1fr;
         gap: 12px !important;
+    }
+    .stats-table td,
+    .stats-table th {
+        padding: 6px 12px;
+        font-size: 16px;
     }
 }
 
