@@ -627,7 +627,7 @@ input.d-none:checked + label {
 .stats-table th {
     padding: 8px 16px;
     font-size: 22px;
-    border: 1px solid #071E2F;
+    /* border: 1px solid #071E2F; */
     text-align: center;
 }
 
