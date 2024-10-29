@@ -652,14 +652,13 @@ input.d-none:checked + label {
         margin-left: auto;
         margin-right: 30px;
         line-height: 20px;
-        flex-direction: column;
     }
     .profile-link img {
         width: 40px;
         height: 40px;
     }
-    .profile-link .login {
-        display: none;
+    .search-wrapper {
+        max-width: none;
     }
 }
 
@@ -685,9 +684,10 @@ input.d-none:checked + label {
         align-items: flex-start;
         max-width: 100vw;
         width: 100%;
+        background-color: #86434a;
     }
     .preloader img {
-        object-fit: cover;
+        object-fit: contain;
         max-width: 100vw;
         max-height: 100vh;
     }
@@ -749,6 +749,14 @@ input.d-none:checked + label {
 @media (max-width: 450px) {
     body {
         font-size: 16px;
+    }
+    .main-item-image {
+        width: 150px;
+        min-width: 150px;
+        height: 150px;
+    }
+    .main-item-image img.larger {
+        width: 200px;
     }
     .mob-grid {
         display: grid !important;
