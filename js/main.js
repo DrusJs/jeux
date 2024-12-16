@@ -120,6 +120,24 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         })
     }
+
+
+    const searchItem = document.querySelector('.search-wrapper')
+
+    if (searchItem) {
+        let input = searchItem.firstElementChild
+        let btn = searchItem.lastElementChild
+
+        btn.addEventListener('click', ()=>{
+            searchItem.classList.toggle('active')
+
+            if (searchItem.classList.contains('active')) {
+                input.focus()
+            } else {
+
+            }
+        })
+    }
 });
 
 function checkInput(item) {

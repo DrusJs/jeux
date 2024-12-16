@@ -126,7 +126,7 @@ h1 {
 }
 
 h3 {
-    max-width: 500px;
+    max-width: 700px;
 }
 
 .input {
@@ -158,11 +158,15 @@ h3 {
     width: 350px;
     min-width: 350px;
     height: 350px;
-    border-radius: 300px;
+    border-radius: 350px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    float: right;
+    display: inline-block;
+    margin-left: 40px;
+}
+.text-main h1,
+.text-main p {
+    margin-bottom: 20px;
 }
 
 .main-item-image img {
@@ -183,7 +187,7 @@ h3 {
 }
 
 .main-item-image img.larger {
-    width: 600px;
+    width: 100%;
 }
 
 .diff {
@@ -302,6 +306,15 @@ h3 {
     width: 170px;
     height: 220px;
 }
+.card.adv-card {
+    width: 100%;
+    overflow: hidden;
+}
+.card.adv-card .card-image,
+.card.adv-card .card-image img {
+    width: 100%;
+    height: auto;
+}
 .card .card-image {
     width: 180px;
     height: 220px;
@@ -325,11 +338,43 @@ h3 {
     width: 260px;
 }
 
+.coins-ind {
+    background-color: rgba(0,0,0,0.8);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-white);
+    top: 2px;
+    right: 2px;
+}
+
+.points-ind {
+    background-color: rgba(0,0,0,0.8);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-white);
+    top: 2px;
+    left: 2px;
+}
+
+.double-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
 
 .card .btn {
     font-weight: 700;
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
     background-color: var(--color-white);
 }
 
@@ -430,6 +475,15 @@ img.que {
     max-width: 700px;
     width: 100%;
     padding: 10px 30px;
+    align-items: center;
+}
+.text-wrapper.d-flex:has(.flex-img),
+.text-wrapper.d-flex:has(.flex-img) .text-wrapper.d-flex {
+    display: block !important;
+}
+
+.text-wrapper.d-flex .flex-img {
+    margin: 12px !important;
 }
 .image-main{
     width: 100%;
@@ -437,7 +491,7 @@ img.que {
     margin: 10px auto 30px;
 }
 .text-wrapper img {
-    height: 240px;
+    height: auto;
     width: auto;
     object-fit: cover;
     margin-left: auto;
@@ -482,9 +536,16 @@ img.que {
 }
 
 .flex-img {
-    width: 60% !important;
-    height: auto !important;
+    width: 30% !important;
     border-radius: 10px;
+    float: left;
+    margin: 20px;
+}
+
+.flex-img.left {
+    width: 200px !important;
+    height: 180px !important;
+    align-self: flex-start;
 }
 
 .btn-next {
@@ -666,9 +727,6 @@ input.d-none:checked + label {
     .container {
         padding: 0 16px;
     }
-    .search-wrapper {
-        order: 1;
-    }
     .header-mob {
         flex-wrap: wrap;
     }
@@ -707,8 +765,7 @@ input.d-none:checked + label {
     }
     
     .adventure-image img {
-        object-fit: cover;
-        height: 70px;
+        height: 70px !important;
     }
     .modal-dialog {
         max-width: 100vw;
@@ -720,7 +777,7 @@ input.d-none:checked + label {
         height: 140px;
     }
     .avatar-card img {        
-        width: 264px;
+        width: 144px;
     }
     .avatar-card img.large {        
         width: 150px;
@@ -744,19 +801,49 @@ input.d-none:checked + label {
         height: 150px;
         max-height: 150px;
     }
+    .profile-link .login {
+        display: none;
+    }
+
+    .search-wrapper {
+        width: 50px;
+        margin-left: auto;
+    }
+
+    .search-wrapper.active {
+        order: 1;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .search-wrapper input {
+        display: none;
+    }
+
+    .search-wrapper.active input {
+        display: block;
+    }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
     body {
         font-size: 16px;
+    }
+    .flex-img.left {
+        width: 130px !important;
+        height: 100px !important;
+        align-self: flex-start;
+    }
+    .double-cols {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        padding: 0 10px;
     }
     .main-item-image {
         width: 150px;
         min-width: 150px;
         height: 150px;
-    }
-    .main-item-image img.larger {
-        width: 200px;
     }
     .mob-grid {
         display: grid !important;
@@ -766,6 +853,23 @@ input.d-none:checked + label {
     .card {
         width: 160px;
         height: 205px;
+    }
+    .adventure-card {
+        position: relative;
+    }
+    .adventure-card .d-flex p:last-child {
+        margin-left: -94px;
+    }
+    .adventure-card .diff {
+        position: absolute;
+        top: 76px;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        left: 0px;
+        width: 72px;
+        white-space: nowrap;
+        font-size: 14px;
+        text-align: center;
     }
     .logo {
         font-size: 24px;
